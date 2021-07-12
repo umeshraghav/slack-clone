@@ -3,11 +3,13 @@
     --clr-bg-dark: hsl(299, 61%, 13%);
     /* Light Background Color*/
     --clr-bg-light : hsl(298, 39%, 19%);
-    --clr-white : hsl(0, 0%, 100%)   
+    --clr-white : hsl(0, 0%, 100%);
+    --clr-btn :    hsl(148, 87%, 30%);
 }
 
 *{
     margin: 0px;
+ 
    
 }
 
@@ -54,8 +56,26 @@
 }
 
 
-
-
+.message{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.message>img{
+    height: 50px;
+    width: 50px;
+    border-radius: 9px;
+    margin: 12px;
+    object-fit: cover;
+}
+.message_info{
+    padding-left: 10px;
+}
+.message_timestamp{
+        color: grey;
+        font-size: 12px;
+        font-weight: 300;
+}
 
 .header{
     display: flex;
@@ -167,4 +187,52 @@ opacity: 0.9;
 }
 .sideBarOption_hash{
     padding: 10px;
+}
+.login{
+    height: 100vh;
+    background-color: #f8f8f8;
+    display: grid;
+    place-items: center;
+}
+.login_container{
+    padding: 100px;
+    text-align: center;
+    background-color: var(--clr-white);
+    border-radius: 10px;
+ 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.13) ,0 1px 2px rgba(0, 0, 0,0.24) ;
+}
+.login_container>img{
+    height: 100px;
+     border-radius: 5px;
+    margin-bottom: 40px;
+    object-fit: cover;
+}
+.login_container>button{
+    margin-top: 50px;
+    text-transform: inherit !important;
+    background-color: var(--clr-btn) !important;
+    color: var(--clr-white);
+}
+
+.chat_Input{
+    border-radius: 20px;
+
+}
+.chat_Input > form{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.chat_Input > form>input{
+    position: fixed;
+    bottom: 30px;
+    width: 70%;
+    border: 1px solid grey;
+    padding: 20px;
+}
+.chat_Input > form>Button{
+    display: none;
 }
